@@ -9,7 +9,6 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        cd /d C:\Users\DELL\Desktop
         call test.bat
     }
 }
