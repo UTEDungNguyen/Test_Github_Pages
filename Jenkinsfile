@@ -1,6 +1,7 @@
 node {
     stage('Build') {
         echo "hello"
+        deleteDir()
         bat "git clone https://github.com/UTEDungNguyen/Test_Github_Pages.git"
     }
     stage('Test') {
@@ -10,6 +11,7 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        //bat "python test_py.py"
+        bat "cd Test_Github_Pages"
+        bat "python test_py.py"
     }
 }
