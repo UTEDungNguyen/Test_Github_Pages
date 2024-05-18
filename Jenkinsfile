@@ -16,20 +16,17 @@ node {
         // sh "cd Test_Github_Pages"
         sh 'pwd'
         dir('Test_Github_Pages') {
-            dir('yaml') {
-                stage('test1'){
-                    sh "python3 test_py.py"
-                }
-
-                stage('test2'){
-                    sh "python3 babaa.py"
-                }
-                
+            stage('test1'){
+                sh "python3 test_py.py"
             }
-            sh "python3 test_py.py"
+
+            stage('test2'){
+                sh "python3 babaa.py"
+            }
+            
+        }
         }
 
-    }
 }
 
 // Deactivate Pipeline
