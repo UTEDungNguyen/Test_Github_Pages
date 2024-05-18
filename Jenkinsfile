@@ -11,8 +11,8 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        cd Test_Github_Pages
-        // sh "ls"
+        // sh "cd Test_Github_Pages"
+        sh "Test_Github_Pages/python3 test_py.py"
     }
 }
 
