@@ -11,9 +11,9 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        sh "cd /var/lib/jenkins/workspace/test_pipeline/Test_Github_Pages"
+        sh "#!/bin/bash"
+        sh "cd Test_Github_Pages"
         sh 'pwd'
-        dir
         sh "python3 test_py.py"
     }
 }
