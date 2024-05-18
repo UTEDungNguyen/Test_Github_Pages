@@ -1,0 +1,2 @@
+steps:
+  - sh: python3 test_py.py
