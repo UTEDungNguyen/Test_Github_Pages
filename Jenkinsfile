@@ -9,6 +9,6 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        call test.bat
+        bat test.bat
     }
 }
