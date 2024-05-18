@@ -12,7 +12,7 @@ node {
     }
     stage('test') {
         // sh "cd Test_Github_Pages"
-        sh "Test_Github_Pages/python3 test_py.py"
+        sh "cd Test_Github_Pages/python3 test_py.py"
     }
 }
 
