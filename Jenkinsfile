@@ -11,10 +11,14 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        sh "#!/bin/bash"
-        sh "cd Test_Github_Pages"
+        // sh "#!/bin/bash"
+        // sh "cd Test_Github_Pages"
         sh 'pwd'
-        sh "python3 test_py.py"
+        steps {
+            dir('Test_Github_Pages') {
+                sh "python3 test_py.py"
+            }
+        }
     }
 }
 
