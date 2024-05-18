@@ -1,11 +1,22 @@
-node {  
-    stage('Build') { 
-        echo 1
-    }
-    stage('Test') { 
-        echo 2
-    }
-    stage('Deploy') { 
-        echo 3
+pipeline {
+    agent any 
+
+    stages {
+        stage('Build') { 
+            steps { 
+                echo 'make' 
+            }
+        }
+        stage('Test'){
+            steps {
+                echo 'make check'
+                echo 'reports/**/*.xml' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'make publish'
+            }
+        }
     }
 }
