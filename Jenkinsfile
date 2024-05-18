@@ -12,7 +12,8 @@ node {
     }
     stage('test') {
         sh "cd /var/lib/jenkins/workspace/test_pipeline/Test_Github_Pages"
-        // sh 'pwd'
+        sh 'pwd'
+        dir
         sh "python3 test_py.py"
     }
 }
