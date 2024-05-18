@@ -11,7 +11,7 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        bat "cd Test_Github_Pages"
+        bat "cd .."
         bat "python test_py.py"
     }
 }
