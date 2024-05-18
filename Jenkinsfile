@@ -1,22 +1,23 @@
-pipeline {
-    agent any 
+node { // sẽ take một node bất kỳ đang available
+    stage('Prepare'){
+        //TODO
+    }
+}
 
-    stages {
-        stage('Build') { 
-            steps { 
-                echo 'make' 
-            }
-        }
-        stage('Test'){
-            steps {
-                echo 'make check'
-                echo 'reports/**/*.xml' 
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'make publish'
-            }
-        }
+node('manhnv1_slave') { // sẽ chạy trên slave machine manhnv1_slave
+    stage('Log1'){
+        //TODO
+    }
+}
+
+node('manhnv2_slave') { // sẽ chạy trên slave machine manhnv2_slave
+    stage('Log2'){
+        //TODO
+    }
+}
+
+node('master') { // Hoặc chạy trên jenkins master 
+    stage('Log'){
+        //TODO
     }
 }
