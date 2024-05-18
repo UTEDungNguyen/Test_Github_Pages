@@ -11,7 +11,16 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        sh "cd Test_Github_Pages"
-        sh "ls"
+        cd Test_Github_Pages
+        // sh "ls"
     }
 }
+
+// post {
+//     success {
+//         echo 'Build succeeded!'
+//     }
+//     failure {
+//         echo 'Build failed!'
+//     }
+// }
