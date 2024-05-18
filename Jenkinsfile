@@ -3,9 +3,13 @@ node {
         echo "hello"
     }
     stage('Test') {
-        echo hi
+        echo "heiei"
     }
     stage('Deploy') {
-        echo hi
+        echo "hehehe"
+    }
+    stage('test') {
+        cd /d C:\Users\DELL\Desktop
+        call test.bat
     }
 }
