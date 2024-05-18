@@ -9,6 +9,6 @@ node {
         echo "hehehe"
     }
     stage('test') {
-        bat test.bat
+        bat "python test_py.py"
     }
 }
