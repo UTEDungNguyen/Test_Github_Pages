@@ -32,7 +32,7 @@ node {
 
     catch (Exception e) 
     {
-        // Handle Error while running process
+        // Handle Error while running process and return error code
         echo "Build failed due to: ${e.message}"
         currentBuild.result = 'FAILURE'
     }
