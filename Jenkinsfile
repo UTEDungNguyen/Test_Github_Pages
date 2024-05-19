@@ -19,7 +19,7 @@ node {
             sh 'pwd'
             dir('Test_Github_Pages') {
                 stage('test1'){
-                    sh "python3 test_py.py"
+                    sh "python3 test_p.py"
                 }
 
                 stage('test2'){
