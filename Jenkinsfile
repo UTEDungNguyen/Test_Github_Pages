@@ -25,7 +25,7 @@ node {
                 stage('test2'){
                     sh "python3 babaa.py"
                     sh "ps aux | grep python3"
-                    sh "pkill -f ControlDCMotor.py"
+                    sh "sudo pkill -f ControlDCMotor.py"
                 }
                 
             }
